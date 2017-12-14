@@ -15,6 +15,8 @@ public static <T> SomeClass<T> newInstance() {
 }
 ```
 
+To reproduce, from the top level run:
+
 ```
 ./mvnw clean install
 ```
