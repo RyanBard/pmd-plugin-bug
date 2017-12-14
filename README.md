@@ -6,7 +6,7 @@ Ex.
 
 ```java
 public static <T> SomeClass<T> newInstance() {
-    return new SomeClass<T> {
+    return new SomeClass<T>() {
         @Override
         public T something(T t) {
             return t;
