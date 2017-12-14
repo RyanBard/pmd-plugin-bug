@@ -1,6 +1,19 @@
 # pmd maven plugin bug
 
-When using the 3.8 version of the maven-pmd-plugin and telling it to use pmd 5.8.1 instead of 5.6.1, it is failing to process certain files (it has to do with an anonymous inner class whose generics infer their type from their parameter) and not reporting pmd errors (and so the build succeeds).
+When using the 3.8 version of the maven-pmd-plugin and telling it to use pmd 5.8.1 instead of 5.6.1, it is failing to process certain files and not reporting pmd errors (and so the build succeeds).  It has to do with an anonymous inner class extending a class whose generics infer a method's parameter's type.  Interfaces (both anonymous inner classes and lambdas) don't reproduce this.  No params in the method signature doesn't seem to reproduce this.
+
+Ex.
+
+```java
+public static <T> SomeClass<T> newInstance() {
+    return new SomeClass<T> {
+        @Override
+        public T something(T t) {
+            return t;
+        }
+    };
+}
+```
 
 ```
 ./mvnw clean install
