@@ -93,3 +93,16 @@ jbard-M01:pmd-bin-5.6.1 jbard$ ./bin/run.sh pmd -d ~/projects/pmd-plugin-bug/ -f
 /Users/jbard/projects/pmd-plugin-bug/example3/src/main/java/org/apache/maven/pmd/bug/Example3.java:12:	Do not use if statements that are always true or always false
 jbard-M01:pmd-bin-5.6.1 jbard$ 
 ```
+
+Environment info:
+
+```
+jbard-M01:pmd-plugin-bug jbard$ ./mvnw -version
+Apache Maven 3.5.2 (138edd61fd100ec658bfa2d307c43b76940a5d7d; 2017-10-18T03:58:13-04:00)
+Maven home: /Users/jbard/.m2/wrapper/dists/apache-maven-3.5.2-bin/28qa8v9e2mq69covern8vmdkj0/apache-maven-3.5.2
+Java version: 1.8.0_144, vendor: Oracle Corporation
+Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "mac os x", version: "10.12.6", arch: "x86_64", family: "mac"
+jbard-M01:pmd-plugin-bug jbard$ 
+```
