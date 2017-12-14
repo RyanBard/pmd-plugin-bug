@@ -1,6 +1,6 @@
 # pmd maven plugin bug
 
-When using the 3.8 version of the maven-pmd-plugin and telling it to use pmd 5.8.1 instead of 5.6.1, it is failing to process certain files and not reporting pmd errors (and so the build succeeds).
+When using the 3.8 version of the maven-pmd-plugin and telling it to use pmd 5.8.1 instead of 5.6.1, it is failing to process certain files (it has to do with an anonymous inner class whose generics infer their type from their parameter) and not reporting pmd errors (and so the build succeeds).
 
 ```
 ./mvnw clean install
